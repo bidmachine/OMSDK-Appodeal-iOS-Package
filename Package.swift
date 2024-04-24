@@ -1,4 +1,4 @@
-// swift-tools-version:5.8
+// swift-tools-version:5.3
 
 import PackageDescription
 
@@ -10,7 +10,6 @@ let package = Package(
     products: [
         .library(
             name: "OMSDK_Appodeal",
-            type: .dynamic,
             targets: [
                 "OMSDK_Appodeal"
             ]

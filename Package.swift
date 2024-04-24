@@ -12,18 +12,11 @@ let package = Package(
             name: "OMSDK_Appodeal",
             type: .dynamic,
             targets: [
-                "OMSDK_AppodealWrapper"
+                "OMSDK_Appodeal"
             ]
         )
     ],
     targets: [
-        .target(
-            name: "OMSDK_AppodealWrapper",
-            dependencies: [
-                .target(name: "OMSDK_Appodeal")
-            ],
-            path: "Wrapper"
-        ),
         .binaryTarget(
             name: "OMSDK_Appodeal",
             url: "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.4.12/OMSDK_Appodeal.zip",

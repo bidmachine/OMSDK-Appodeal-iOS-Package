@@ -1,4 +1,5 @@
 {
     "1.4.12": "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.4.12/OMSDK_Appodeal.zip",
-    "1.5.0": "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.5.0/OMSDK_Appodeal.zip"
+    "1.5.0": "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.5.0/OMSDK_Appodeal.zip",
+    "1.5.1": "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.5.1/OMSDK_Appodeal.zip"
 }

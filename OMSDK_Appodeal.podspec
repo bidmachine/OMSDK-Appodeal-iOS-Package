@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                     = "OMSDK_Appodeal"
-  spec.version                  = "1.5.0"
+  spec.version                  = "1.5.1"
   spec.summary                  = "Open measure sdk for Appodeal"
 
   spec.description              = <<-DESC
@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.author                   = { "Stack" => "https://explorestack.com/bidmachine/" }
 
   spec.platform                 = :ios, '10.0'
-  spec.source                   = { :http => "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.5.0/OMSDK_Appodeal.zip" }
+  spec.source                   = { :http => "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.5.1/OMSDK_Appodeal.zip" }
 
   spec.vendored_frameworks      = "OMSDK_Appodeal.xcframework"
   spec.frameworks               = "AdSupport"

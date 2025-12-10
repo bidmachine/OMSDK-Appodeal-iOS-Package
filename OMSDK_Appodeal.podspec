@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                     = "OMSDK_Appodeal"
-  spec.version                  = "1.5.5"
+  spec.version                  = "1.6.0.1"
   spec.summary                  = "Open measure sdk for Appodeal"
 
   spec.description              = <<-DESC
@@ -13,9 +13,16 @@ Pod::Spec.new do |spec|
   spec.license                  = { :type => 'Commercial', :text => 'https://bidmachine.io/sdk-license-agreement/' }
   spec.author                   = { "Stack" => "https://explorestack.com/bidmachine/" }
 
-  spec.platform                 = :ios, '10.0'
-  spec.source                   = { :http => "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.5.5/OMSDK_Appodeal.zip" }
-
-  spec.vendored_frameworks      = "OMSDK_Appodeal.xcframework"
+  spec.platform                 = :ios, '12.0'
+  spec.source                   = { :http => "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.6.0/Pods/OMSDK_Appodeal.zip" }
   spec.frameworks               = "AdSupport"
+  spec.default_subspec          = "Dynamic"
+
+  spec.subspec 'Static' do |ss|
+    ss.vendored_frameworks      = "Static/OMSDK_Appodeal.xcframework"
+  end
+
+  spec.subspec 'Dynamic' do |ss|
+    ss.vendored_frameworks      = "Dynamic/OMSDK_Appodeal.xcframework"
+  end
 end

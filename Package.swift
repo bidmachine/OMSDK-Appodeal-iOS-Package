@@ -3,29 +3,21 @@
 import PackageDescription
 
 let package = Package(
-    name:"OMSDK_Appodeal",
+    name: "OMSDK_Appodeal",
     platforms: [
-        .iOS("10.0")
+        .iOS(.v12)
     ],
     products: [
         .library(
             name: "OMSDK_Appodeal",
-            type: .dynamic,
-            targets: [
-                "OMSDK_AppodealLib"
-            ]
+            targets: ["OMSDK_Appodeal"]
         )
     ],
     targets: [
-        target(
-            name: "OMSDK_AppodealLib",
-            dependencies: ["OMSDK_Appodeal"],
-            path: "Sources"
-        ),
         .binaryTarget(
             name: "OMSDK_Appodeal",
-            url: "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.5.5/OMSDK_Appodeal.zip",
-            checksum: "e94cd38f6da7f5f23bdee49dd8963881a40ba91307041581f7bfc1ca389687aa"
+            url: "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.6.0/SPM/OMSDK_Appodeal.zip",
+            checksum: "ee366dd03c3a4b3bbee7afa443e7539951c1e8c213403048ba008f02f0fb0eb6"
         )
     ]
 )

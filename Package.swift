@@ -17,7 +17,7 @@ let package = Package(
         .binaryTarget(
             name: "OMSDK_Appodeal",
             url: "https://s3-us-west-1.amazonaws.com/appodeal-ios/external-sdks/OMSDK_Appodeal/1.6.0/SPM/OMSDK_Appodeal.zip",
-            checksum: "ee366dd03c3a4b3bbee7afa443e7539951c1e8c213403048ba008f02f0fb0eb6"
+            checksum: "2dc9382ce748e1e173175915bbfe1e17d162e26d248c283448d14dea62369880"
         )
     ]
 )

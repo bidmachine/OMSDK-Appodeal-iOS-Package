@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                     = "OMSDK_Appodeal"
-  spec.version                  = "1.6.0.1"
+  spec.version                  = "1.6.0.2"
   spec.summary                  = "Open measure sdk for Appodeal"
 
   spec.description              = <<-DESC

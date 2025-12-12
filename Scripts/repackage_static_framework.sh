@@ -60,6 +60,27 @@ framework module OMSDK_Appodeal {
 }
 EOF
 
+  # Detect platform and set appropriate values
+  if [[ "$slice_name" == tvos-*-simulator ]]; then
+    platform="AppleTVSimulator"
+    platform_name="appletvsimulator"
+    min_os_version="9.0"
+  elif [[ "$slice_name" == tvos-* ]]; then
+    platform="AppleTVOS"
+    platform_name="appletvos"
+    min_os_version="9.0"
+  elif [[ "$slice_name" == ios-*-simulator ]]; then
+    platform="iPhoneSimulator"
+    platform_name="iphonesimulator"
+    min_os_version="9.0"
+  else
+    platform="iPhoneOS"
+    platform_name="iphoneos"
+    min_os_version="9.0"
+  fi
+
+  echo "  - Platform: $platform ($platform_name)"
+
   # Create Info.plist
   echo "  - Creating Info.plist..."
   cat > "$framework_dir/Info.plist" << EOF
@@ -81,8 +102,16 @@ EOF
     <string>FMWK</string>
     <key>CFBundleShortVersionString</key>
     <string>$VERSION</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+        <string>$platform</string>
+    </array>
     <key>CFBundleVersion</key>
     <string>1</string>
+    <key>DTPlatformName</key>
+    <string>$platform_name</string>
+    <key>MinimumOSVersion</key>
+    <string>$min_os_version</string>
 </dict>
 </plist>
 EOF

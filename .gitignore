@@ -1,6 +1,7 @@
 .DS_Store
 /.build
 /Packages
+/Scripts/omsdk_build
 /*.xcodeproj
 xcuserdata/
 DerivedData/

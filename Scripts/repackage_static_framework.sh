@@ -64,19 +64,19 @@ EOF
   if [[ "$slice_name" == tvos-*-simulator ]]; then
     platform="AppleTVSimulator"
     platform_name="appletvsimulator"
-    min_os_version="9.0"
+    min_os_version="11.0"
   elif [[ "$slice_name" == tvos-* ]]; then
     platform="AppleTVOS"
     platform_name="appletvos"
-    min_os_version="9.0"
+    min_os_version="11.0"
   elif [[ "$slice_name" == ios-*-simulator ]]; then
     platform="iPhoneSimulator"
     platform_name="iphonesimulator"
-    min_os_version="9.0"
+    min_os_version="11.0"
   else
     platform="iPhoneOS"
     platform_name="iphoneos"
-    min_os_version="9.0"
+    min_os_version="11.0"
   fi
 
   echo "  - Platform: $platform ($platform_name)"

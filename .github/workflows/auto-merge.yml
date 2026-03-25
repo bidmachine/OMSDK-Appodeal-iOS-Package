@@ -1,0 +1,31 @@
+name: Auto Approve Bot PRs
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    if: github.actor == 'jenkins-bot-appodealx'
+    steps:
+      - name: Approve PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: gh pr review $PR_URL --approve
+
+      - name: Attempt Merge or Close on Failure
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: |
+          if ! gh pr merge $PR_URL --merge --delete-branch; then
+            echo "Merge failed (probably due to conflicts). Closing PR..."
+            gh pr close $PR_URL --comment "Auto-closing this PR because it has conflicts or cannot be merged automatically."
+            exit 1
+          fi
